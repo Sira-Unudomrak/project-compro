@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Project</title>
+  
+    <style>
+        body{
+        background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-04.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat-x;
+        font-family: 'Roboto', sans-serif;
+        }
+    </style></head>
+    
+    <body>
+    <form method="post">
+        <br>
+        <h1 class="text-center"><font color="ffffff"> <center>Project ComPro</center></font></h1>
+        <p class="text-center"><font color="ffffff"><center>กลุ่ม 7</center></font></p>
+        <hr>
+        <h2><center> <img src="https://static.dezeen.com/uploads/2020/01/sony-vision-s-electric-car-technology_dezeen_2364_hero-1-852x479.jpg" height="300" width="500"> </center></h2>
+       <h3 class="text-center"><font color="ffffff"> <center>เครื่องให้อาหารสัตร์TMO</center></font></h3>
+        <center><b><font size="7" color="ffffff"><span id="date_time_eng">08:44:40 PM</span></font></b></center>
+            
+<br>
+
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04"><font color="ffffff">ID</font></label>
+                <input type="number" class="form-control" name="id" required="">
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationCustom04"><font color="ffffff">Email</font></label>
+                <input type="email" class="form-control" name="email" required="">
+            </div>
+        </div>
+
+<br>
+            <center><button type="submit" class="btn btn-success" name="sendemail">OK!</button></center>
+
+    </form>
+    
+        
+    <script type="text/javascript">
+	$( document ).ready(function() {
+    window.onload = date_time_eng('date_time_eng');
+});
+function date_time_eng(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+		h = h % 12;
+		h = h ? h : 12; // the hour '0' should be '12'
+		if(h<10)
+			{
+					h = "0"+h;
+			}
+			
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+		
+		ampm = date.getHours() >= 12 ? 'PM' : 'AM';
+		
+        result = h+':'+m+':'+s+' '+ampm;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time_eng("'+id+'");','1000');
+        return true;
+}
+</script>
+</body></html>
